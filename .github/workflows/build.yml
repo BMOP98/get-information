@@ -52,4 +52,4 @@ jobs:
           docker pull ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
           docker stop get-information || true
           docker rm get-information || true
-          docker run -d --name get-information -p 3000:3000 ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
+          docker run -d --name get-information -p 4005:4005 ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
